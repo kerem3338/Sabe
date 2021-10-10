@@ -1,5 +1,4 @@
 #this file paste sabe.py into python lib folder
-#Run cmd as Adminisator and enter this command python module.py
 from shutil import copyfile
 import os
 import sys
