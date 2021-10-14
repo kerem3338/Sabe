@@ -11,13 +11,20 @@ import sabe
 app = sabe.Sabe()
 app.route("/", "Merhaba Dünya")
 ```
+**info()**<br>
+bilgilendirme metinini görüntüler<br>
+
+**version**<br>
+versiyonu döndürür<br>
+
 
 **render_file(filename, encoding="utf8") tür: String Argümanlar: 2**<br>
 dosyanın içini okur ve içerğini döndürür
 örnek: `app.route("/", app.render_file("örnek.html")`
 <br>
-**info**
 
+**render_website(url) tür: string Argümanlar: 2**<br>
+web sitesinin içerğini döndürür<br>
 ### İletişim
 
 iletişim mail adresim <a href="mailto:zoda@vuhuv.com">zoda@vuhuv.com</a>
