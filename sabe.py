@@ -13,7 +13,7 @@ class Sabe:
         self.app = Flask(__name__)
         self.route_list = []
         self.url_list = []
-        self.version = "1.0"
+        self.version = "2.0"
         
 
     def info(self):
