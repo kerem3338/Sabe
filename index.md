@@ -12,8 +12,9 @@ app = sabe.Sabe()
 app.route("/", "Merhaba Dünya")
 ```
 
-### Sabe() tür: sınıf
-### render
+## render_file(filename, encoding="utf8") tür: String Argümanlar: 2
+dosyanın içini okur ve içerğini döndürür
+örnek: `app.route("/", app.render_file("örnek.html")`
 
 ### İletişim
 
