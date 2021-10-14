@@ -12,9 +12,11 @@ app = sabe.Sabe()
 app.route("/", "Merhaba Dünya")
 ```
 
-**render_file(filename, encoding="utf8") tür: String Argümanlar: 2**
+**render_file(filename, encoding="utf8") tür: String Argümanlar: 2**<br>
 dosyanın içini okur ve içerğini döndürür
 örnek: `app.route("/", app.render_file("örnek.html")`
+<br>
+**info**
 
 ### İletişim
 
