@@ -24,7 +24,7 @@ dosyanın içini okur ve içerğini döndürür<br>
 <br>
 
 **render_website(url) tür: string Argümanlar: 2**<br>
-<h3 style="color: red;">Dikkat! Bu işlem bazı sitelerin lisanslarına göre yasadışı olabilir</h3>
+Some Markdown text with <span style="color:blue">some *blue* text</span>.
 web sitesinin içerğini döndürür<br>
 ### İletişim
 
