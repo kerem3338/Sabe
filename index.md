@@ -19,11 +19,12 @@ versiyonu döndürür<br>
 
 
 **render_file(filename, encoding="utf8") tür: String Argümanlar: 2**<br>
-dosyanın içini okur ve içerğini döndürür
+dosyanın içini okur ve içerğini döndürür<br>
 örnek: `app.route("/", app.render_file("örnek.html")`
 <br>
 
 **render_website(url) tür: string Argümanlar: 2**<br>
+<h3 style="color: red;">Dikkat! Bu işlem bazı sitelerin lisanslarına göre yasadışı olabilir</h3>
 web sitesinin içerğini döndürür<br>
 ### İletişim
 
