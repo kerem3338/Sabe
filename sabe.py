@@ -2,6 +2,7 @@
 from flask import Flask, render_template, request
 from colorama import init
 from termcolor import colored
+import webbrowser
 init()
 
 
@@ -69,12 +70,18 @@ class Sabe:
             return filecontant.read()
 
 
-    def run(self, default="/"):
+    def run(self, run="classic"):
         """Run application"""
-        if __name__ == "__main__":
-            self.app.run()
+        if run == "classic":
+            if __name__ == "__main__":
+                self.app.run()
+        elif run == "auto":
+            if __name__ == "__main__":
+                self.app.run()
+                webbrowser.open("http://127.0.0.1:5000/")
+        else:
+            print("Tanımlanmayan mod")
         
-
 
 
 
