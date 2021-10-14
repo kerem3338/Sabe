@@ -24,8 +24,27 @@ dosyanın içini okur ve içerğini döndürür<br>
 <br>
 
 **render_website(url) tür: string Argümanlar: 2**<br>
-Some Markdown text with <span style="color:blue">some *blue* text</span>.
+⚠️Dikkat⚠️ Bu işlem bazı sitelerin lisans haklarına aykırırdır. Olası bir lisans probleminde sorumluluk kabul edilmez<br>
 web sitesinin içerğini döndürür<br>
+örnek: `app.route("/", app.render_website("example.com"))`<br>
+
+**routes()**<br>
+bütün "yolları (routes)" döndürür.<br>
+
+**url_routes()**<br>
+Bütün kayıtlı "url" leri döndürür.<br>
+
+
+**route(route, code) tür: string Argümanlar: 2**<br>
+uygulamaya "yol" ekler<br>
+örnek: `app.route("/", "<h1>Merhaba Dünya</h1>)`<br>
+
+**error_page_add(error_code, code) tür: string Argümanlar: 2**<br>
+uygulamaya oluşan hatalar için (404 vb) klasik hata sayfası yerine özel hata sayfası oluşturur<br>
+örnek: `app.error_page_add("404", "<h1>404</h1>)`
+
+**run()**<br>
+uygulamayı çalıştırır.<br>
 ### İletişim
 
 iletişim mail adresim <a href="mailto:zoda@vuhuv.com">zoda@vuhuv.com</a>
