@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## Sabe Dökümantasyonuna hoşgeldiniz!
 
-You can use the [editor on GitHub](https://github.com/kerem3338/Sabe/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Sabe kolayca web server kurmak için yazılmış bir python kütüphanesidir.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<a href="https://github.com/you"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
 
 ### Markdown
 
