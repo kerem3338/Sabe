@@ -3,18 +3,19 @@ from flask import Flask, render_template, request
 from colorama import init
 from termcolor import colored
 import webbrowser
+import flask
+from waitress import serve
 init()
-
 
 
 class Sabe:
     """Sabe web uygulamarını daha kolay ve hızlı şekilde yapabilmek için yazılmıştır"""
+
     def __init__(self):
         self.app = Flask(__name__)
         self.route_list = []
         self.url_list = []
-        self.version = "2.0"
-        
+        self.version = "2.0.1"
 
     def info(self):
         print("Sabe © Kerem ata\n\nSabe kolay web sitesi oluşturmak için yazılmış bir frameworkdür\nTemelinde flask bulunmaktadır")
@@ -23,8 +24,7 @@ class Sabe:
         """return version"""
         return self.version
 
-
-    def render_website(self, url):
+    def render_website(self, route, url):
         """get file content render content (cannot get css or js file(s))"""
         try:
             import requests
@@ -32,7 +32,11 @@ class Sabe:
             print(colored("requests modülü bulunamadı", "red"))
         try:
             url = requests.get(url)
-            return url.text
+
+            @self.app.route(route)
+            def page():
+                return url.text
+
             self.url_list.append(url)
         except requests.exceptions.MissingSchema:
             #print(colored(f"Geçersiz Url: Bunu mu demek istedinizi? (https://{url})", "red"))
@@ -42,6 +46,7 @@ class Sabe:
     def url_routes(self):
         """return all websites urls"""
         return(self.url_routes)
+
     def routes(self):
         """return all routes"""
         return(self.route_list)
@@ -49,7 +54,6 @@ class Sabe:
     def route(self, route, code):
         """add route for application"""
         self.route_list.append(route)
-
 
         @self.app.route(route)
         def page():
@@ -61,6 +65,10 @@ class Sabe:
             @self.app.errorhandler(404)
             def not_found(e):
                 return code
+        elif error_code == "500":
+            @self.app.errorhandler(500)
+            def server_error(e):
+                return code
         else:
             print(colored(f"Hata kodu {error_code} bulunamadı", "red"))
 
@@ -69,20 +77,11 @@ class Sabe:
         with open(filename, encoding=encoding) as filecontant:
             return filecontant.read()
 
-
-    def run(self, run="classic"):
+    def run(self):
         """Run application"""
-        if run == "classic":
-            if __name__ == "__main__":
-                self.app.run()
-        elif run == "auto":
-            if __name__ == "__main__":
-                self.app.run()
-                webbrowser.open("http://127.0.0.1:5000/")
-        else:
-            print("Tanımlanmayan mod")
+        self.app.run()
+
+    def __str__(self):
+        return "<Sabe>"
+
         
-
-
-
-
