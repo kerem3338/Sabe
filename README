@@ -5,4 +5,4 @@ Sabe, kolay web sunucusu kurulumu için yazılmış bir python çerçevesidir. �
 sabe.py - library file/Kütüphane dosyası
 module.py - sabe.py dosyasını python lib klasörüne yapıştırır/ paste sabe.py file into python lib directory
 
-Kullanan herkeze çok teşekkürler
+Kullanan herkese çok teşekkürler
